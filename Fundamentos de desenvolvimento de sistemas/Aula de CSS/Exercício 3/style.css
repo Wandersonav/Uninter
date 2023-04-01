@@ -1,0 +1,10 @@
+ul {
+    font-size:20px;
+    width: fit-content;
+}
+/*odd - par e even-impar*/
+ul li:nth-child(odd){
+
+    background-color:red;
+ 
+}
