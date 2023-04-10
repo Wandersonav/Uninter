@@ -1,22 +1,22 @@
 let botao1 = document.querySelector("#bt");
+let estaQuebrado = false;
 
-botao1.addEventListener("mouseover", corVerde);
-botao1.addEventListener("mouseout", corVerde);
-botao1.addEventListener('click', corVermelho);
+botao1.style.background="blue";
+    
 
+botao1.addEventListener("mouseover", e =>{
+    if (!estaQuebrado) // ! significa não
+    botao1.style.background="green"; 
+     });
 
-    function corVerde(){
-        botao1.style.background="green";
-    }
-
-    function corVerde() {
-        botao1.style.background="blue";
-
-    }
-
-    function corVermelho() {
-        botao1.style.background="red";
+botao1.addEventListener("mouseout", e =>{
+    if (!estaQuebrado) // ! significa não
+    botao1.style.background="blue"; 
+     });
         
-        alert("quebrei")
+botao1.addEventListener('click', e =>{
+    botao1.style.background="red"; 
+        botao1.innerHTML="Quebrei";
+        estaQuebrado=true;
+    });
 
-    }
